@@ -1,4 +1,5 @@
-@use './abstract/variaveis';
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
 
 header {
     background: variaveis.$gradiente-primario;
@@ -25,17 +26,15 @@ header {
 
             a{
                 text-decoration: none;
-                color: variaveis.$cor-1;
+                @include mixins.formatar-fonte(variaveis.$fonte-textos, 1rem, variaveis.$cor-1);
                 font-weight: 500;
-                font-family: variaveis.$fonte-textos;
             }
         }
     }
 
     #home{
         max-width: 90vw;
-        width: 80%;
-        margin: 0 auto;
+        @include mixins.margem-central(80%);
         display: flex;
         align-items: center;
         justify-content: space-between;
