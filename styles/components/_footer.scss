@@ -1,0 +1,10 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+footer{
+    background: variaveis.$cor-4;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 5rem;
+    @include mixins.formatar-fonte(variaveis.$fonte-textos, 1rem, variaveis.$cor-1);
+}
