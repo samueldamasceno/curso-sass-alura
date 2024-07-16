@@ -5,4 +5,38 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-align: center;
+
+    h4{
+        @include mixins.formatar-fonte(variaveis.$fonte-titulos, 1.6rem, variaveis.$cor-1);
+    }
+    p{
+        @include mixins.formatar-fonte(variaveis.$fonte-textos, 1.2rem, variaveis.$cor-1);
+    }
+
+    .input-btn{
+        $largura-input: 790px;
+        width: $largura-input;
+        height: 65px;
+        border: 1px solid variaveis.$cor-2;
+        border-radius: 65px;
+        margin: 0 auto;
+        display: inline-flex;
+
+        input{
+            @include mixins.formatar-fonte(variaveis.$fonte-textos, 1.2rem, variaveis.$cor-1);
+            width: calc($largura-input * 0.65);
+            border: none;
+            outline: none;
+            margin-left: 2rem;
+        }
+
+        button{
+            @include mixins.formatar-fonte(variaveis.$fonte-textos, 1.2rem, white);
+            width: calc($largura-input * 0.35);
+            background: variaveis.$cor-2;
+            border-radius: 0 65px 65px 0;
+            border: none;
+        }
+    }
 }
